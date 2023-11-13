@@ -8,7 +8,7 @@ public class D2_1989 {
         int T = scanner.nextInt();
 
         int test = 1;
-        //int flag = 1;   // for 문안에서 flag 변수가 1로 초기화가 안됨 
+        //int flag = 1;   // for 문안에서 flag 변수가 1로 초기화가 안됨
         for(int t=0; t<T; t++) {
             String s = scanner.next();
             char[] c = s.toCharArray();
