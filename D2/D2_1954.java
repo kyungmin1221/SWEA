@@ -1,6 +1,5 @@
 package SWEA.SWEA.D2;
 
-import java.io.IOException;
 import java.util.Scanner;
 
 // 달팽이 숫자 //
@@ -18,7 +17,7 @@ public class D2_1954 {
             int x = 0, y = 0;
             int d = 0;
             while (count <= N * N) {
-                snail[x][y] = count++;
+                snail[x][y] = count;
                 int nx = x + dx[d];
                 int ny = y + dy[d];
                 if (nx < 0 || nx >= N || ny < 0 || ny >= N || snail[nx][ny] != 0) {
@@ -29,6 +28,7 @@ public class D2_1954 {
                 }
                 x = nx;
                 y = ny;
+                count ++;
             }
             System.out.println("#"+t);
             for(int i=0; i<N; i++) {
@@ -37,8 +37,6 @@ public class D2_1954 {
                 }
                 System.out.println();
             }
-
         }
     }
-
 }
