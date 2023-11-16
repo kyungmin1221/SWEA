@@ -19,17 +19,17 @@ public class D2_1284 {
             int S = Integer.parseInt(st.nextToken());   // B 사의 R 리터 이상일 경우 추가 요금
             int W = Integer.parseInt(st.nextToken());   // 한 달간 사용하는 수도의 양
 
-            int add = W-R;  // B 사의 추가 요금  = 150
+            int add = W-R;  // B 사의 추가 요금
 
-            int Afactory = P * W;   // 90
-            int Bfactory = Q;       // 100
+            int Afactory = P * W;
+            int Bfactory = Q;
             if(W<R) {
                 Bfactory = Q;
             } else {                // 추가 요금을 내야히는 경우
-                Bfactory = Bfactory + (add*S);  //
+                Bfactory = Bfactory + (add*S);
             }
 
-            if(Afactory<Bfactory) {
+            if(Afactory<Bfactory) {     // 요금이 더 적은 회사의 요금 출력
                 System.out.println("#"+t+" "+Afactory);
             } else {
                 System.out.println("#"+t+" "+Bfactory);
