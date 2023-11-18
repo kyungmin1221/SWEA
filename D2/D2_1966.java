@@ -19,7 +19,22 @@ public class D2_1966 {
             for(int i=0; i<N; i++) {
                 A[i] = Integer.parseInt(st.nextToken());
             }
-            Arrays.sort(A);
+//            Arrays.sort(A);
+//            System.out.print("#"+t+" ");
+//            for(int x : A) {
+//                System.out.print(x+ " ");
+//            }
+//            System.out.println();
+
+            for(int i=0; i<N-1; i++) {    // 0-4
+                for(int j=0; j<N-i-1; j++) {    // 0-
+                    if(A[j]>A[j+1]) {
+                        int temp = A[j];
+                        A[j] = A[j+1];
+                        A[j+1] = temp;
+                    }
+                }
+            }
             System.out.print("#"+t+" ");
             for(int x : A) {
                 System.out.print(x+ " ");
